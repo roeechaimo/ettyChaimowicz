@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+// @import '~@angular/material/theming';
+// // always include only once per project
+// @include mat-core();
+@import 'theme.scss';
+.theme {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, accent);
+  $foreground: map-get($theme, foreground); //   $background: map-get($my-theme, background);
+}

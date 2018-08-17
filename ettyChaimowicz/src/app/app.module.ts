@@ -5,12 +5,18 @@ import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { SharedModule } from "./shared/shared.module";
 import { AboutModule } from "./about/about.module";
+import { GalleryModule } from "./gallery/gallery.module";
 import { AboutComponent } from "./about/about.component";
-import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
-  declarations: [AppComponent, GalleryComponent],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, AboutModule],
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule,
+    AboutModule,
+    GalleryModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [AboutComponent]

@@ -5,10 +5,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {
   MatButtonModule,
   MatIconModule,
-  MatSidenavModule
+  MatListModule,
+  MatToolbarModule
 } from "@angular/material";
-
-import { SidenavComponent } from "../components/sidenav/sidenav.component";
 
 @NgModule({
   imports: [
@@ -16,9 +15,15 @@ import { SidenavComponent } from "../components/sidenav/sidenav.component";
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    MatSidenavModule
+    MatListModule,
+    MatToolbarModule
   ],
-  declarations: [SidenavComponent],
-  exports: [SidenavComponent]
+  exports: [
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatListModule,
+    MatToolbarModule
+  ]
 })
 export class MaterialModule {}

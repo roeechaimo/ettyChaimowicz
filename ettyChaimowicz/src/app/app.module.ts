@@ -6,6 +6,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { SharedModule } from "./shared/shared.module";
 import { AboutModule } from "./about/about.module";
 import { GalleryModule } from "./gallery/gallery.module";
+import { ShowsModule } from "./shows/shows.module";
+import { ContactUsModule } from "./contact-us/contact-us.module";
 import { AboutComponent } from "./about/about.component";
 
 @NgModule({
@@ -15,7 +17,9 @@ import { AboutComponent } from "./about/about.component";
     AppRoutingModule,
     SharedModule,
     AboutModule,
-    GalleryModule
+    GalleryModule,
+    ShowsModule,
+    ContactUsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

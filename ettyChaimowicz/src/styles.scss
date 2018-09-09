@@ -6,6 +6,15 @@
   $foreground: map-get($theme, foreground);
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
+  padding: 0;
+  .sub-container {
+    padding: 0 0 0 2vw;
+  }
 }

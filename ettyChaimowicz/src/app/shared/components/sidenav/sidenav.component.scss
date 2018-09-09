@@ -1,9 +1,15 @@
 .sidenav-container {
+  display: flex;
   height: 100%;
 }
 
 .sidenav {
-  width: 200px;
+  width: 20vw;
+  position: static;
+}
+
+.mat-drawer-content {
+  width: 100%;
 }
 
 .mat-toolbar.mat-primary {

@@ -10,6 +10,6 @@ import { SidenavComponent } from "./components/sidenav/sidenav.component";
 @NgModule({
   imports: [CommonModule, AppRoutingModule, MaterialModule, MatSidenavModule],
   declarations: [SidenavComponent],
-  exports: [SidenavComponent]
+  exports: [SidenavComponent, MaterialModule]
 })
 export class SharedModule {}

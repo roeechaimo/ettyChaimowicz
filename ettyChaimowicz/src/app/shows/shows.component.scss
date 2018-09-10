@@ -1,0 +1,7 @@
+div.list {
+  display: flex;
+  justify-content: space-around;
+  mat-card {
+    max-width: 30%;
+  }
+}

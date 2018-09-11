@@ -1,16 +1,21 @@
 <div class="sub-container">
-  <mat-card class="card">
-    <mat-card-header>
-      <mat-card-title>{{show.title}}</mat-card-title>
-    </mat-card-header>
+  <div class="image-container">
+    <img [src]="show.imageUrl">
 
-    <img mat-card-image [src]="show.imageUrl">
+    <h2>{{show.title}}</h2>
+  </div>
 
-    <mat-card-content>
-      <p>
-        {{show.description}}
-      </p>
-    </mat-card-content>
-  </mat-card>
+  <p>{{show.description}}</p>
+
+  <div class="list">
+    <!-- TODO - preview pics nicely -->
+    <mat-card class="card" *ngFor="let painting of show.paintings">
+      <mat-card-header>
+        <mat-card-title>{{painting.name}}</mat-card-title>
+      </mat-card-header>
+
+      <img mat-card-image [src]="painting.imageUrl">
+    </mat-card>
+  </div>
 
 </div>

@@ -13,7 +13,25 @@ export class SingleShowComponent implements OnInit {
   public show: {} = {
     title: "shit",
     description: "desc-shit",
-    imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
+    imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+    paintings: [
+      {
+        name: "one",
+        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
+      },
+      {
+        name: "two",
+        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
+      },
+      {
+        name: "three",
+        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
+      },
+      {
+        name: "four",
+        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
+      }
+    ]
   };
 
   constructor() {}

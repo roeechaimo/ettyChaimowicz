@@ -10,10 +10,9 @@ import { PreviewImageDialogComponent } from "../../shared/components/preview-ima
 export class SingleShowComponent implements OnInit {
   // TODO - make dynamic and import show from shows component
 
-  // @Input() show;
-
   public show: {} = {
-    title: "shit",
+    id: 1,
+    title: "Show number one",
     description: "desc-shit",
     imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
     paintings: [
@@ -43,10 +42,6 @@ export class SingleShowComponent implements OnInit {
   public previewImage(painting) {
     const dialogRef = this._dialog.open(PreviewImageDialogComponent, {
       data: painting
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log("The dialog was closed");
     });
   }
 }

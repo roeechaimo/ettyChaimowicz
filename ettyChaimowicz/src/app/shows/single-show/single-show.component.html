@@ -9,7 +9,7 @@
 
   <div class="list">
     <!-- TODO - preview pics nicely -->
-    <mat-card class="card" *ngFor="let painting of show.paintings">
+    <mat-card class="card" *ngFor="let painting of show.paintings" (click)="previewImage(painting)">
       <mat-card-header>
         <mat-card-title>{{painting.name}}</mat-card-title>
       </mat-card-header>

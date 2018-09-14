@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { MatDialog } from "../../../../node_modules/@angular/material";
+import { PreviewImageDialogComponent } from "../../shared/components/preview-image-dialog/preview-image-dialog.component";
 
 @Component({
   selector: "app-single-show",
@@ -34,7 +36,17 @@ export class SingleShowComponent implements OnInit {
     ]
   };
 
-  constructor() {}
+  constructor(private _dialog: MatDialog) {}
 
   ngOnInit() {}
+
+  public previewImage(painting) {
+    const dialogRef = this._dialog.open(PreviewImageDialogComponent, {
+      data: painting
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log("The dialog was closed");
+    });
+  }
 }

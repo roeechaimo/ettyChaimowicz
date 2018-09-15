@@ -16,4 +16,5 @@ export const routes: Routes = [
     path: "single-show-description/:id",
     component: SingleShowDescriptionComponent
   }
+  // TODO - add categories rout and flow
 ];

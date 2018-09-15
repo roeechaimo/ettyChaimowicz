@@ -3,22 +3,6 @@
 
   <!-- TODO - get shows from server -->
   <div class="list">
-    <mat-card class="card" *ngFor="let show of shows">
-      <mat-card-header>
-        <mat-card-title>{{show.title}}</mat-card-title>
-      </mat-card-header>
-
-      <img mat-card-image [src]="show.imageUrl">
-
-      <mat-card-content>
-        <p>
-          {{show.description}}
-        </p>
-      </mat-card-content>
-
-      <mat-card-actions>
-        <button mat-raised-button (click)="watchShow()">Watch</button>
-      </mat-card-actions>
-    </mat-card>
+    <app-single-show *ngFor="let show of shows" [show]="show"></app-single-show>
   </div>
 </div>

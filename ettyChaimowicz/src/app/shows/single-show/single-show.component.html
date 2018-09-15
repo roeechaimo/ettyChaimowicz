@@ -1,4 +1,4 @@
-<div class="sub-container">
+<!-- <div class="sub-container">
   <div class="image-container">
     <img [src]="show.imageUrl">
 
@@ -17,4 +17,22 @@
     </mat-card>
   </div>
 
-</div>
+</div> -->
+
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{show.title}}</mat-card-title>
+  </mat-card-header>
+
+  <img mat-card-image [src]="show.imageUrl">
+
+  <mat-card-content>
+    <p>
+      {{show.description}}
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="watchShow()">Watch</button>
+  </mat-card-actions>
+</mat-card>

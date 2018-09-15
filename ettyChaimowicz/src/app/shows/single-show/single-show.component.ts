@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { MatDialog } from "../../../../node_modules/@angular/material";
-import { PreviewImageDialogComponent } from "../../shared/components/preview-image-dialog/preview-image-dialog.component";
+import { Router } from "../../../../node_modules/@angular/router";
 
 @Component({
   selector: "app-single-show",
@@ -8,40 +7,16 @@ import { PreviewImageDialogComponent } from "../../shared/components/preview-ima
   styleUrls: ["./single-show.component.scss"]
 })
 export class SingleShowComponent implements OnInit {
-  // TODO - make dynamic and import show from shows component
+  @Input()
+  show;
+  // TODO - make dynamic and import show from shows component with image.service
 
-  public show: {} = {
-    id: 1,
-    title: "Show number one",
-    description: "desc-shit",
-    imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-    paintings: [
-      {
-        name: "one",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
-      },
-      {
-        name: "two",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
-      },
-      {
-        name: "three",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
-      },
-      {
-        name: "four",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
-      }
-    ]
-  };
-
-  constructor(private _dialog: MatDialog) {}
+  constructor(private _router: Router) {}
 
   ngOnInit() {}
 
-  public previewImage(painting) {
-    const dialogRef = this._dialog.open(PreviewImageDialogComponent, {
-      data: painting
-    });
+  // TODO - navigate and pass show data to single show component
+  public watchShow() {
+    this._router.navigate(["/single-show-description", this.show.id]);
   }
 }

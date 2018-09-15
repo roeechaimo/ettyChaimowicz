@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from "../../../node_modules/@angular/router";
+
+import { SHOWS } from "../core/mocks/shows.mock";
 
 @Component({
   selector: "app-shows",
@@ -7,60 +8,10 @@ import { Router } from "../../../node_modules/@angular/router";
   styleUrls: ["./shows.component.scss"]
 })
 export class ShowsComponent implements OnInit {
-  public shows = [
-    {
-      title: "Show number 1",
-      imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-      description: "This was show 1 blah blah blah.",
-      paintings: [
-        {
-          name: "one",
-          imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
-        },
-        {
-          name: "two",
-          imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
-        },
-        {
-          name: "three",
-          imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
-        },
-        {
-          name: "four",
-          imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
-        }
-      ]
-    },
-    {
-      title: "Show number 2",
-      imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-      description: "This was show 2 blah blah blah.",
-      paintings: [
-        {
-          name: "one",
-          imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
-        },
-        {
-          name: "two",
-          imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
-        },
-        {
-          name: "three",
-          imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
-        },
-        {
-          name: "four",
-          imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg"
-        }
-      ]
-    }
-  ];
+  // TODO - get shows from server instead of mock
+  public shows = SHOWS;
 
-  constructor(private _router: Router) {}
+  constructor() {}
 
   ngOnInit() {}
-
-  public watchShow() {
-    this._router.navigate(["/single-show"]);
-  }
 }

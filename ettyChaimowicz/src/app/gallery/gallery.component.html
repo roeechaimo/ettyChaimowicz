@@ -1,5 +1,12 @@
 <div class="sub-container">
-  <p>
-    gallery works!
-  </p>
+  <h2>Gallery</h2>
+
+  <!-- TODO - get albums from server -->
+  <div class="list">
+    <mat-chip-list>
+      <mat-chip *ngFor="let album of albums" [color]="accent" class="pointer">
+        {{album.title}}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
 </div>

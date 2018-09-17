@@ -1,9 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { MatDialog } from "../../../../node_modules/@angular/material";
-import {
-  ActivatedRoute,
-  Router
-} from "../../../../node_modules/@angular/router";
+import { MatDialog } from "@angular/material";
+import { ActivatedRoute, Router } from "@angular/router";
 
 import { PreviewImageDialogComponent } from "../../shared/components/preview-image-dialog/preview-image-dialog.component";
 import { SHOWS } from "../../core/mocks/shows.mock";

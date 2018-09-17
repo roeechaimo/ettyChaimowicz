@@ -1,9 +1,7 @@
-export const CATEGORIES = [
+export const ALBUMS = [
   {
     id: 1,
-    title: "Category number 1",
-    imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-    description: "This was category 1 blah blah blah.",
+    title: "Album number 1",
     paintings: [
       {
         name: "one",
@@ -25,9 +23,7 @@ export const CATEGORIES = [
   },
   {
     id: 2,
-    title: "Category number 2",
-    imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-    description: "This was category 2 blah blah blah.",
+    title: "Album number 2",
     paintings: [
       {
         name: "one",
@@ -49,9 +45,7 @@ export const CATEGORIES = [
   },
   {
     id: 3,
-    title: "Category number 3",
-    imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-    description: "This was category 3 blah blah blah.",
+    title: "Album number 3",
     paintings: [
       {
         name: "one",

@@ -1,5 +1,11 @@
+@import '../../_variables.scss';
+
 mat-chip-list {
-  div.mat-chip-list-wrapper {
+  ::ng-deep .mat-chip-list-wrapper {
     margin: initial;
+  }
+
+  mat-chip:hover {
+    background-color: $accent;
   }
 }

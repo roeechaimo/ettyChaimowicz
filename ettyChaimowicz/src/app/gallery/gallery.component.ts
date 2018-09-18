@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "../../../node_modules/@angular/router";
 
 import { ALBUMS } from "../core/mocks/albums.mock";
 
@@ -11,7 +12,11 @@ export class GalleryComponent implements OnInit {
   // TODO - get albums from server instead of mock
   public albums = ALBUMS;
 
-  constructor() {}
+  constructor(private _router: Router) {}
 
   ngOnInit() {}
+
+  public watchAlbum(album) {
+    this._router.navigate(["/album", album.id]);
+  }
 }

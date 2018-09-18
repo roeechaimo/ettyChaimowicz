@@ -1,0 +1,24 @@
+<div class="sub-container">
+  <div class="header-container">
+    <div class="button-container">
+      <img class="pointer" src="../../../assets/images/baseline_arrow_back_black_18dp.png" (click)="back()">
+    </div>
+
+    <div>
+      <h2>{{album.title}}</h2>
+    </div>
+  </div>
+
+  <p>{{album.description}}</p>
+
+  <div class="list">
+    <mat-card class="card pointer" *ngFor="let painting of album.paintings" (click)="previewImage(painting)">
+      <mat-card-header>
+        <mat-card-title>{{painting.name}}</mat-card-title>
+      </mat-card-header>
+
+      <img mat-card-image [src]="painting.imageUrl">
+    </mat-card>
+  </div>
+
+</div>

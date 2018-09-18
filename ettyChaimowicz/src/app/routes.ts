@@ -5,6 +5,7 @@ import { GalleryComponent } from "./gallery/gallery.component";
 import { ShowsComponent } from "./shows/shows.component";
 import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { SingleShowDescriptionComponent } from "./shows/single-show-description/single-show-description.component";
+import { AlbumComponent } from "./gallery/album/album.component";
 
 export const routes: Routes = [
   { path: "", redirectTo: "/about", pathMatch: "full" },
@@ -15,6 +16,6 @@ export const routes: Routes = [
   {
     path: "single-show-description/:id",
     component: SingleShowDescriptionComponent
-  }
-  // TODO - add categories rout and flow
+  },
+  { path: "album/:id", component: AlbumComponent }
 ];

@@ -2,6 +2,7 @@ export const ALBUMS = [
   {
     id: 1,
     title: "Album number 1",
+    description: "1 blah blah",
     paintings: [
       {
         name: "one",
@@ -24,6 +25,7 @@ export const ALBUMS = [
   {
     id: 2,
     title: "Album number 2",
+    description: "2 blah blah",
     paintings: [
       {
         name: "one",
@@ -46,6 +48,7 @@ export const ALBUMS = [
   {
     id: 3,
     title: "Album number 3",
+    description: "3 blah blah",
     paintings: [
       {
         name: "one",

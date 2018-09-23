@@ -1,3 +1,5 @@
+// TODO - add id to paintings
+
 export const SHOWS = [
   {
     id: 1,

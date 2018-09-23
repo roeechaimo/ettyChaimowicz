@@ -1,3 +1,4 @@
+// TODO - add id to paintings
 export const ALBUMS = [
   {
     id: 1,

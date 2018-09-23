@@ -9,7 +9,9 @@
     </div>
   </div>
 
-  <p>{{album.description}}</p>
+  <div class="description-container">
+    <p>{{album.description}}</p>
+  </div>
 
   <div class="list">
     <mat-card class="card pointer" *ngFor="let painting of album.paintings" (click)="previewImage(painting)">

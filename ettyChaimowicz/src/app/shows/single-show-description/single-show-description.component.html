@@ -11,7 +11,9 @@
     </div>
   </div>
 
-  <p>{{show.description}}</p>
+  <div class="description-container">
+    <p>{{show.description}}</p>
+  </div>
 
   <div class="list">
     <mat-card class="card pointer" *ngFor="let painting of show.paintings" (click)="previewImage(painting)">

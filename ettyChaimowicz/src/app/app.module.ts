@@ -9,9 +9,10 @@ import { GalleryModule } from "./gallery/gallery.module";
 import { ShowsModule } from "./shows/shows.module";
 import { ContactUsModule } from "./contact-us/contact-us.module";
 import { AboutComponent } from "./about/about.component";
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

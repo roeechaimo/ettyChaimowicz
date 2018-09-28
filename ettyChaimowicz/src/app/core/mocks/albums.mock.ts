@@ -7,28 +7,32 @@ export const ALBUMS = [
       {
         id: 9,
         name: "nine",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+        imageUrl:
+          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785490/user_photos/ettyChaimowicz/gallery/1/paintings/black-background.jpg",
         type: "album",
         externalId: 1
       },
       {
         id: 10,
         name: "ten",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+        imageUrl:
+          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785487/user_photos/ettyChaimowicz/gallery/1/paintings/apple.jpg",
         type: "album",
         externalId: 1
       },
       {
         id: 11,
         name: "eleven",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+        imageUrl:
+          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785487/user_photos/ettyChaimowicz/gallery/1/paintings/burger.jpg",
         type: "album",
         externalId: 1
       },
       {
         id: 12,
         name: "four",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+        imageUrl:
+          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785484/user_photos/ettyChaimowicz/gallery/1/paintings/back.jpg",
         type: "album",
         externalId: 1
       }
@@ -42,28 +46,32 @@ export const ALBUMS = [
       {
         id: 13,
         name: "one",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+        imageUrl:
+          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785482/user_photos/ettyChaimowicz/gallery/2/paintings/eye.jpg",
         type: "album",
         externalId: 2
       },
       {
         id: 14,
         name: "two",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+        imageUrl:
+          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785482/user_photos/ettyChaimowicz/gallery/2/paintings/body.jpg",
         type: "album",
         externalId: 2
       },
       {
         id: 15,
         name: "three",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+        imageUrl:
+          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785481/user_photos/ettyChaimowicz/gallery/2/paintings/bird.jpg",
         type: "album",
         externalId: 2
       },
       {
         id: 16,
         name: "four",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+        imageUrl:
+          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785480/user_photos/ettyChaimowicz/gallery/2/paintings/diamond.jpg",
         type: "album",
         externalId: 2
       }

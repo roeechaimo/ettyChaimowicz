@@ -18,6 +18,10 @@ div.sub-container {
     .card {
       margin: 0 1% 1% 1%;
       width: calc(100% * (1/4) - 1% - 1% - 7%);
+
+      img {
+        height: 20vh;
+      }
     }
   }
 }

@@ -12,6 +12,7 @@ div.sub-container {
       img {
         width: 10%;
         padding: 0 1% 0 0;
+        height: 5vh;
       }
     }
   }
@@ -28,6 +29,11 @@ div.sub-container {
     .card {
       margin: 0 1% 1% 1%;
       width: calc(100% * (1/4) - 1% - 1% - 7%);
+      height: 30vh;
+
+      img {
+        height: 85%;
+      }
     }
   }
 }

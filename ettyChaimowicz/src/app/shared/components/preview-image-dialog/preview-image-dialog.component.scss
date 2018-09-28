@@ -1,8 +1,12 @@
 div.dialog-container {
+  overflow: auto;
+
   div.image-container {
     text-align: center;
+
     img {
       width: 30vw;
+      height: 30vw;
     }
   }
 }

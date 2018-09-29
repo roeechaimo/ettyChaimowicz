@@ -4,7 +4,7 @@
   <!-- TODO - get albums from server -->
   <div class="list">
     <mat-chip-list>
-      <mat-chip *ngFor="let album of albums" selected="false" class="pointer" (click)="watchAlbum(album)">
+      <mat-chip *ngFor="let album of albums" color="primary" selected="false" class="pointer" (click)="watchAlbum(album)">
         {{album.title}}
       </mat-chip>
     </mat-chip-list>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
-import { NguCarousel, NguCarouselStore } from "@ngu/carousel";
+import { NguCarouselConfig } from "@ngu/carousel";
 
 import { ALBUMS } from "../core/mocks/albums.mock";
 
@@ -10,52 +10,37 @@ import { ALBUMS } from "../core/mocks/albums.mock";
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
-  public carouselBanner;
+  public carouselConfig: NguCarouselConfig = {
+    grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
+    slide: 1,
+    speed: 400,
+    interval: {
+      timing: 3000,
+      initialDelay: 1000
+    },
+    point: {
+      visible: false
+    },
+    load: 2,
+    loop: true,
+    touch: true
+  };
   public albums = ALBUMS;
-  public imgags = [
-    this.albums[0].paintings[0],
-    this.albums[0].paintings[1],
-    this.albums[0].paintings[2],
-    this.albums[0].paintings[3]
+  public carouselItems = [
+    this.albums[0].paintings[0].imageUrl,
+    this.albums[0].paintings[1].imageUrl,
+    this.albums[0].paintings[2].imageUrl,
+    this.albums[0].paintings[3].imageUrl
   ];
+  public carouselTileItems: Array<any> = [0, 1, 2, 3];
+  public carouselTiles = {
+    0: [],
+    1: [],
+    2: [],
+    3: []
+  };
 
   constructor() {}
 
-  ngOnInit() {
-    // TODO - implement carousle properly
-    this.carouselBanner = {
-      grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
-      slide: 1,
-      speed: 400,
-      interval: {
-        timing: 3000,
-        initialDelay: 1000
-      },
-      point: {
-        visible: true
-      },
-      load: 2,
-      loop: true,
-      touch: true
-    };
-    this.initCarousleBanner();
-  }
-
-  private initCarousleBanner() {
-    // this.carouselBanner = {
-    //   grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
-    //   slide: 1,
-    //   speed: 400,
-    //   interval: {
-    //     timing: 3000,
-    //     initialDelay: 1000
-    //   },
-    //   point: {
-    //     visible: true
-    //   },
-    //   load: 2,
-    //   loop: true,
-    //   touch: true
-    // };
-  }
+  ngOnInit() {}
 }

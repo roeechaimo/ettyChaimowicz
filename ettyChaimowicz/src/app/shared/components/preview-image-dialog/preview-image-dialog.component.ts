@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from "@angular/core";
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
+import { Painting } from "../../../core/models/painting.model";
 
 @Component({
   selector: "app-preview-image-dialog",
@@ -7,12 +8,11 @@ import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
   styleUrls: ["./preview-image-dialog.component.scss"]
 })
 export class PreviewImageDialogComponent implements OnInit {
-  // TODO - create models for dialog data, image, show...
-  public image: any;
+  public image: Painting;
 
   constructor(
     private _dialogRef: MatDialogRef<PreviewImageDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) private _data: any
+    @Inject(MAT_DIALOG_DATA) private _data: Painting
   ) {}
 
   ngOnInit() {

@@ -7,6 +7,8 @@ import {
 
 import { PreviewImageDialogComponent } from "../../shared/components/preview-image-dialog/preview-image-dialog.component";
 import { ALBUMS } from "../../core/mocks/albums.mock";
+import { Painting } from "../../core/models/painting.model";
+import { Album } from "../../core/models/album.model";
 
 @Component({
   selector: "app-album",
@@ -15,9 +17,9 @@ import { ALBUMS } from "../../core/mocks/albums.mock";
 })
 export class AlbumComponent implements OnInit {
   // TODO - make dynamic and import show from shows component with image.service
-  public album: {} = {};
+  public album: Album;
 
-  private albums = ALBUMS;
+  private albums: Album[] = ALBUMS;
 
   constructor(
     private _dialog: MatDialog,
@@ -38,7 +40,7 @@ export class AlbumComponent implements OnInit {
     this._router.navigate(["/gallery"]);
   }
 
-  public previewImage(painting) {
+  public previewImage(painting: Painting) {
     const dialogRef = this._dialog.open(PreviewImageDialogComponent, {
       data: painting
     });

@@ -1,3 +1,5 @@
+import { PaintingType } from "../models/painting.model";
+
 export const SHOWS = [
   {
     id: 1,
@@ -11,7 +13,7 @@ export const SHOWS = [
         name: "one",
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785587/user_photos/ettyChaimowicz/shows/1/paintings/old-man.jpg",
-        type: "show",
+        type: PaintingType.SHOW,
         externalId: 1
       },
       {
@@ -19,7 +21,7 @@ export const SHOWS = [
         name: "two",
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785586/user_photos/ettyChaimowicz/shows/1/paintings/mouth.jpg",
-        type: "show",
+        type: PaintingType.SHOW,
         externalId: 1
       },
       {
@@ -27,7 +29,7 @@ export const SHOWS = [
         name: "three",
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785586/user_photos/ettyChaimowicz/shows/1/paintings/hand.png",
-        type: "show",
+        type: PaintingType.SHOW,
         externalId: 1
       },
       {
@@ -35,7 +37,7 @@ export const SHOWS = [
         name: "four",
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785586/user_photos/ettyChaimowicz/shows/1/paintings/heart.jpg",
-        type: "show",
+        type: PaintingType.SHOW,
         externalId: 1
       }
     ]
@@ -52,7 +54,7 @@ export const SHOWS = [
         name: "one",
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785586/user_photos/ettyChaimowicz/shows/2/paintings/flower.jpg",
-        type: "show",
+        type: PaintingType.SHOW,
         externalId: 2
       },
       {
@@ -60,7 +62,7 @@ export const SHOWS = [
         name: "two",
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785586/user_photos/ettyChaimowicz/shows/2/paintings/face.jpg",
-        type: "show",
+        type: PaintingType.SHOW,
         externalId: 2
       },
       {
@@ -68,7 +70,7 @@ export const SHOWS = [
         name: "three",
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785585/user_photos/ettyChaimowicz/shows/2/paintings/girl.jpg",
-        type: "show",
+        type: PaintingType.SHOW,
         externalId: 2
       },
       {
@@ -76,7 +78,7 @@ export const SHOWS = [
         name: "four",
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785585/user_photos/ettyChaimowicz/shows/2/paintings/lion.jpg",
-        type: "show",
+        type: PaintingType.SHOW,
         externalId: 2
       }
     ]

@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { MatDialog } from "@angular/material";
 import { ActivatedRoute, Router } from "@angular/router";
 
+import { AngularFirestore } from "angularfire2/firestore";
+
 import { PreviewImageDialogComponent } from "../../shared/components/preview-image-dialog/preview-image-dialog.component";
 import { SHOWS } from "../../core/mocks/shows.mock";
 import { Show } from "../../core/models/show.model";
@@ -16,15 +18,33 @@ export class SingleShowDescriptionComponent implements OnInit {
   // TODO - make dynamic and import show from shows component with image.service
   public show: Show;
 
-  private shows: Show[] = SHOWS;
+  private shows: Show[];
 
   constructor(
     private _dialog: MatDialog,
+    private _db: AngularFirestore,
     private _route: ActivatedRoute,
     private _router: Router
   ) {}
 
+  // TODO - make this work
+  private showsRef = this._db.collection("shows");
+
   ngOnInit() {
+    this.showsInit();
+  }
+
+  ngAfterViewInit() {
+    this.routerParamsInit();
+  }
+
+  private showsInit() {
+    this.showsRef.get().subscribe(data => {
+      this.shows = data.docs.map(doc => doc.data());
+    });
+  }
+
+  private routerParamsInit() {
     this._route.params.subscribe(params => {
       const { id } = params;
       this.show = this.shows.find(show => {

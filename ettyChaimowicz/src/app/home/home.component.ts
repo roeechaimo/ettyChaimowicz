@@ -2,7 +2,8 @@ import { Component, OnInit } from "@angular/core";
 
 import { NguCarouselConfig } from "@ngu/carousel";
 
-import { ALBUMS } from "../core/mocks/albums.mock";
+import { Album } from "../core/models/album.model";
+import { AngularFirestore } from "angularfire2/firestore";
 
 @Component({
   selector: "app-home",
@@ -25,22 +26,45 @@ export class HomeComponent implements OnInit {
     loop: true,
     touch: true
   };
-  public albums = ALBUMS;
-  public carouselItems = [
-    this.albums[0].paintings[0].imageUrl,
-    this.albums[0].paintings[1].imageUrl,
-    this.albums[0].paintings[2].imageUrl,
-    this.albums[0].paintings[3].imageUrl
-  ];
-  public carouselTileItems: Array<any> = [0, 1, 2, 3];
-  public carouselTiles = {
-    0: [],
-    1: [],
-    2: [],
-    3: []
-  };
+  public albums: Album[];
 
-  constructor() {}
+  constructor(private _db: AngularFirestore) {}
 
-  ngOnInit() {}
+  public carouselItems;
+  public carouselTileItems: Array<any>;
+  public carouselTiles;
+
+  private albumsRef = this._db.collection("gallery");
+
+  ngOnInit() {
+    this.albumsInit();
+  }
+
+  private albumsInit() {
+    this.albumsRef.get().subscribe(data => {
+      // TODO - get rid of this ts error
+      this.albums = data.docs.map(doc => doc.data());
+
+      this.carousleItemsInit();
+    });
+  }
+
+  // TODO - make this work
+  private carousleItemsInit() {
+    this.carouselItems = [
+      this.albums[0].paintings[0].imageUrl,
+      this.albums[0].paintings[1].imageUrl,
+      this.albums[0].paintings[2].imageUrl,
+      this.albums[0].paintings[3].imageUrl
+    ];
+
+    this.carouselTileItems = [0, 1, 2, 3];
+
+    this.carouselTiles = {
+      0: [],
+      1: [],
+      2: [],
+      3: []
+    };
+  }
 }

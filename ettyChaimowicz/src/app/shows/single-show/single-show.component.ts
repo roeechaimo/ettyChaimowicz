@@ -11,7 +11,6 @@ import { Show } from "../../core/models/show.model";
 export class SingleShowComponent implements OnInit {
   @Input()
   show: Show;
-  // TODO - make dynamic and import show from shows component with image.service
 
   constructor(private _router: Router) {}
 

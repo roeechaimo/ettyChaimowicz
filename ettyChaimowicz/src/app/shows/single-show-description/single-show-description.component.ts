@@ -5,7 +5,6 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { AngularFirestore } from "angularfire2/firestore";
 
 import { PreviewImageDialogComponent } from "../../shared/components/preview-image-dialog/preview-image-dialog.component";
-import { SHOWS } from "../../core/mocks/shows.mock";
 import { Show } from "../../core/models/show.model";
 import { Painting } from "../../core/models/painting.model";
 
@@ -15,7 +14,6 @@ import { Painting } from "../../core/models/painting.model";
   styleUrls: ["./single-show-description.component.scss"]
 })
 export class SingleShowDescriptionComponent implements OnInit {
-  // TODO - make dynamic and import show from shows component with image.service
   public show: Show;
 
   private shows: Show[];
@@ -27,30 +25,10 @@ export class SingleShowDescriptionComponent implements OnInit {
     private _router: Router
   ) {}
 
-  // TODO - make this work
   private showsRef = this._db.collection("shows");
 
   ngOnInit() {
     this.showsInit();
-  }
-
-  ngAfterViewInit() {
-    this.routerParamsInit();
-  }
-
-  private showsInit() {
-    this.showsRef.get().subscribe(data => {
-      this.shows = data.docs.map(doc => doc.data());
-    });
-  }
-
-  private routerParamsInit() {
-    this._route.params.subscribe(params => {
-      const { id } = params;
-      this.show = this.shows.find(show => {
-        return show.id === +id;
-      });
-    });
   }
 
   public back() {
@@ -60,6 +38,24 @@ export class SingleShowDescriptionComponent implements OnInit {
   public previewImage(painting: Painting) {
     const dialogRef = this._dialog.open(PreviewImageDialogComponent, {
       data: painting
+    });
+  }
+
+  private showsInit() {
+    this.showsRef.get().subscribe(data => {
+      // TODO - get rid of this ts error
+      this.shows = data.docs.map(doc => doc.data());
+
+      this.routerParamsInit();
+    });
+  }
+
+  private routerParamsInit() {
+    this._route.params.subscribe(params => {
+      const { id } = params;
+      this.show = this.shows.find(show => {
+        return show.id === +id;
+      });
     });
   }
 }

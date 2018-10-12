@@ -4,7 +4,6 @@ import { Router } from "../../../node_modules/@angular/router";
 import { AngularFirestore } from "angularfire2/firestore";
 
 import { Album } from "../core/models/album.model";
-import { ALBUMS } from "../core/mocks/albums.mock";
 
 @Component({
   selector: "app-gallery",
@@ -12,7 +11,6 @@ import { ALBUMS } from "../core/mocks/albums.mock";
   styleUrls: ["./gallery.component.scss"]
 })
 export class GalleryComponent implements OnInit {
-  // TODO - get albums from server instead of mock
   public albums: Album[];
 
   constructor(private _router: Router, private _db: AngularFirestore) {}
@@ -29,8 +27,8 @@ export class GalleryComponent implements OnInit {
 
   private albumsInit() {
     this.albumsRef.get().subscribe(data => {
-      // TODO - get rid of this ts error
-      this.albums = data.docs.map(doc => doc.data());
+      const albumsData: any = data.docs.map(doc => doc.data());
+      this.albums = albumsData;
     });
   }
 }

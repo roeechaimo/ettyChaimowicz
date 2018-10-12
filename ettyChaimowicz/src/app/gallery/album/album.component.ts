@@ -45,8 +45,8 @@ export class AlbumComponent implements OnInit {
 
   private albumsInit() {
     this.albumsRef.get().subscribe(data => {
-      // TODO - get rid of this ts error
-      this.albums = data.docs.map(doc => doc.data());
+      const albumsData: any = data.docs.map(doc => doc.data());
+      this.albums = albumsData;
 
       this.routerParamsInit();
     });

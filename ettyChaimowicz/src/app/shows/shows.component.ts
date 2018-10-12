@@ -11,7 +11,6 @@ import { Show } from "../core/models/show.model";
   styleUrls: ["./shows.component.scss"]
 })
 export class ShowsComponent implements OnInit {
-  // TODO - get shows from server instead of mock
   public shows: Show[];
 
   constructor(private _db: AngularFirestore) {}
@@ -24,8 +23,8 @@ export class ShowsComponent implements OnInit {
 
   private showsInit() {
     this.showsRef.get().subscribe(data => {
-      // TODO - get rid of this ts error
-      this.shows = data.docs.map(doc => doc.data());
+      const showsData: any = data.docs.map(doc => doc.data());
+      this.shows = showsData;
     });
   }
 }

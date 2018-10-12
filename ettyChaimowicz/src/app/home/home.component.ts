@@ -4,6 +4,7 @@ import { NguCarouselConfig } from "@ngu/carousel";
 
 import { Album } from "../core/models/album.model";
 import { AngularFirestore } from "angularfire2/firestore";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-home",
@@ -42,8 +43,8 @@ export class HomeComponent implements OnInit {
 
   private albumsInit() {
     this.albumsRef.get().subscribe(data => {
-      // TODO - get rid of this ts error
-      this.albums = data.docs.map(doc => doc.data());
+      const albumsData: any = data.docs.map(doc => doc.data());
+      this.albums = albumsData;
 
       this.carousleItemsInit();
     });

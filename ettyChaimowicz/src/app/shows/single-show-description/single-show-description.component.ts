@@ -43,8 +43,8 @@ export class SingleShowDescriptionComponent implements OnInit {
 
   private showsInit() {
     this.showsRef.get().subscribe(data => {
-      // TODO - get rid of this ts error
-      this.shows = data.docs.map(doc => doc.data());
+      const showsData: any = data.docs.map(doc => doc.data());
+      this.shows = showsData;
 
       this.routerParamsInit();
     });

@@ -5,8 +5,8 @@
   src: url('../src/assets/fonts/world-of-water.regular.ttf');
 }
 
-$theme-primary: mat-palette($mat-deep-purple, A400);
-$theme-accent: mat-palette($mat-indigo, 100);
+$theme-primary: mat-palette($mat-green, A100);
+$theme-accent: mat-palette($mat-lime, 50);
 $theme-warn: mat-palette($mat-deep-orange, A200);
 $theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
 @include angular-material-theme($theme);

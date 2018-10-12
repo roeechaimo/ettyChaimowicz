@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private _db: AngularFirestore) {}
 
-  public carouselItems;
+  public carouselItems: Array<any> = [];
   public carouselTileItems: Array<any>;
   public carouselTiles;
 
@@ -49,7 +49,6 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  // TODO - make this work
   private carousleItemsInit() {
     this.carouselItems = [
       this.albums[0].paintings[0].imageUrl,

@@ -77,7 +77,7 @@ export const SHOWS = [
         id: 8,
         name: "four",
         imageUrl:
-          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785585/user_photos/ettyChaimowicz/shows/2/paintings/lion.jpg",
+          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785585/user_photos/ettyChaimowicz/shows/2/paintings/girl.jpg",
         type: PaintingType.SHOW,
         externalId: 2
       }

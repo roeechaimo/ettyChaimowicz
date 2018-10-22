@@ -28,11 +28,15 @@ div.sub-container {
 
     .card {
       margin: 0 1% 1% 1%;
-      width: calc(100% * (1/4) - 1% - 1% - 7%);
-      height: 30vh;
+      max-width: calc(100% * (1/4) - 1% - 1% - 7%);
+      // TODO - handle these image sizes
+      // height: 30vh;
 
       img {
-        height: 85%;
+        max-height: 100%;
+        max-width: 100%;
+        height: auto;
+        width: auto;
       }
     }
   }

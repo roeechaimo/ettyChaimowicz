@@ -1,6 +1,13 @@
     .card {
+      text-align: center;
+
+      mat-card-content {
+        text-align: initial;
+      }
+
       img {
-        // TODO - handle img size and make it absolout also in single-show-description and album 
-        height: 20vh;
+        max-height: 20vh;
+        height: auto;
+        width: auto;
       }
     }

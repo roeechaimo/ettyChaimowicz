@@ -17,11 +17,13 @@ div.sub-container {
 
     .card {
       margin: 0 1% 1% 1%;
-      width: calc(100% * (1/4) - 1% - 1% - 7%);
+      flex: 1;
+      text-align: center;
+      display: grid;
 
-      // TODO - fix image proportions
       img {
-        height: 20vh;
+        max-width: 100%;
+        margin: 0;
       }
     }
   }

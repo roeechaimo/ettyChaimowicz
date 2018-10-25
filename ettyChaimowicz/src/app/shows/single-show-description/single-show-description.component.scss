@@ -5,6 +5,7 @@ div.sub-container {
     display: flex;
     align-items: center;
 
+    // TODO - fix image proportions
     div.image-container {
       display: flex;
       align-items: center;
@@ -28,15 +29,11 @@ div.sub-container {
 
     .card {
       margin: 0 1% 1% 1%;
-      max-width: calc(100% * (1/4) - 1% - 1% - 7%);
-      // TODO - handle these image sizes
-      // height: 30vh;
+      text-align: center;
+      flex: 1;
 
       img {
-        max-height: 100%;
         max-width: 100%;
-        height: auto;
-        width: auto;
       }
     }
   }

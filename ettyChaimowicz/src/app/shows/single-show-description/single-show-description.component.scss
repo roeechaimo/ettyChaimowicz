@@ -5,15 +5,12 @@ div.sub-container {
     display: flex;
     align-items: center;
 
-    // TODO - fix image proportions
     div.image-container {
-      display: flex;
-      align-items: center;
+      height: 5vh;
+      padding: 0 1% 0 0;
 
       img {
-        width: 10%;
-        padding: 0 1% 0 0;
-        height: 5vh;
+        max-height: 100%;
       }
     }
   }

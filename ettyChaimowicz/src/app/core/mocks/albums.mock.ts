@@ -91,38 +91,30 @@ export const ALBUMS = [
   },
   {
     id: 2,
-    title: "Album number 2",
-    description: "2 blah blah",
+    title: "Cover",
+    description: "Cover album",
     paintings: [
       {
-        id: 13,
-        name: "one",
+        id: 19,
+        name: "cover_1",
         imageUrl:
-          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785482/user_photos/ettyChaimowicz/gallery/2/paintings/eye.jpg",
+          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540825169/user_photos/ettyChaimowicz/prod/gallery/2/cover/cover_1.jpg",
         type: PaintingType.ALBUM,
         externalId: 2
       },
       {
-        id: 14,
-        name: "two",
+        id: 20,
+        name: "cover_2",
         imageUrl:
-          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785482/user_photos/ettyChaimowicz/gallery/2/paintings/body.jpg",
+          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540825169/user_photos/ettyChaimowicz/prod/gallery/2/cover/cover_2.jpg",
         type: PaintingType.ALBUM,
         externalId: 2
       },
       {
-        id: 15,
-        name: "three",
+        id: 21,
+        name: "cover_3",
         imageUrl:
-          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785481/user_photos/ettyChaimowicz/gallery/2/paintings/bird.jpg",
-        type: PaintingType.ALBUM,
-        externalId: 2
-      },
-      {
-        id: 16,
-        name: "four",
-        imageUrl:
-          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1537785480/user_photos/ettyChaimowicz/gallery/2/paintings/diamond.jpg",
+          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540825170/user_photos/ettyChaimowicz/prod/gallery/2/cover/cover_3.jpg",
         type: PaintingType.ALBUM,
         externalId: 2
       }
@@ -130,34 +122,14 @@ export const ALBUMS = [
   },
   {
     id: 3,
-    title: "Album number 3",
-    description: "3 blah blah",
+    title: "Zunami",
+    description: "Zunami album",
     paintings: [
       {
-        id: 17,
-        name: "one",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-        type: PaintingType.ALBUM,
-        externalId: 3
-      },
-      {
-        id: 18,
-        name: "two",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-        type: PaintingType.ALBUM,
-        externalId: 3
-      },
-      {
-        id: 19,
-        name: "three",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
-        type: PaintingType.ALBUM,
-        externalId: 3
-      },
-      {
-        id: 20,
-        name: "four",
-        imageUrl: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+        id: 22,
+        name: "zunami_1",
+        imageUrl:
+          "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540825200/user_photos/ettyChaimowicz/prod/gallery/3/zunami/zunami_1.jpg",
         type: PaintingType.ALBUM,
         externalId: 3
       }

@@ -10,12 +10,8 @@ export class GalleryService {
 
   constructor(private _db: AngularFirestore) {}
 
-  // TODO - return an observable
+  // TODO - use this also for shows components
   public showAlbums() {
-    this.albumsRef.get().subscribe(data => {
-      const albumsData: any = data.docs.map(doc => doc.data());
-
-      return albumsData;
-    });
+    return this.albumsRef.get();
   }
 }

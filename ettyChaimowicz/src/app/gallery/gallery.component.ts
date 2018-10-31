@@ -1,8 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "../../../node_modules/@angular/router";
 
-import { AngularFirestore } from "angularfire2/firestore";
-
 import { Album } from "../core/models/album.model";
 import { GalleryService } from "./gallery.service";
 
@@ -16,11 +14,8 @@ export class GalleryComponent implements OnInit {
 
   constructor(
     private _router: Router,
-    private _db: AngularFirestore,
     private _galleryservice: GalleryService
   ) {}
-
-  private albumsRef = this._db.collection("gallery");
 
   ngOnInit() {
     this.albumsInit();
@@ -31,12 +26,10 @@ export class GalleryComponent implements OnInit {
   }
 
   private albumsInit() {
-    // this.albumsRef.get().subscribe(data => {
-    //   const albumsData: any = data.docs.map(doc => doc.data());
-    //   this.albums = albumsData;
-    // });
-    const albums: any = this._galleryservice.showAlbums();
+    this._galleryservice.showAlbums().subscribe(data => {
+      const albumsData: any = data.docs.map(doc => doc.data());
 
-    this.albums = albums;
+      this.albums = albumsData;
+    });
   }
 }

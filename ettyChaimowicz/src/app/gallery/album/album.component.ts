@@ -5,10 +5,10 @@ import {
   Router
 } from "../../../../node_modules/@angular/router";
 
+import { GalleryService } from "../gallery.service";
 import { PreviewImageDialogComponent } from "../../shared/components/preview-image-dialog/preview-image-dialog.component";
 import { Painting } from "../../core/models/painting.model";
 import { Album } from "../../core/models/album.model";
-import { AngularFirestore } from "angularfire2/firestore";
 
 @Component({
   selector: "app-album",
@@ -22,12 +22,10 @@ export class AlbumComponent implements OnInit {
 
   constructor(
     private _dialog: MatDialog,
-    private _db: AngularFirestore,
+    private _galleryservice: GalleryService,
     private _route: ActivatedRoute,
     private _router: Router
   ) {}
-
-  private albumsRef = this._db.collection("gallery");
 
   ngOnInit() {
     this.albumsInit();
@@ -44,8 +42,9 @@ export class AlbumComponent implements OnInit {
   }
 
   private albumsInit() {
-    this.albumsRef.get().subscribe(data => {
+    this._galleryservice.showAlbums().subscribe(data => {
       const albumsData: any = data.docs.map(doc => doc.data());
+
       this.albums = albumsData;
 
       this.routerParamsInit();

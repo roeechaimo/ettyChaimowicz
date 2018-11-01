@@ -1,6 +1,5 @@
 import { PaintingType } from "../models/painting.model";
 
-// TODO - add new links also to other albums and paintings
 export const ALBUMS = [
   {
     id: 1,
@@ -13,7 +12,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540750918/user_photos/ettyChaimowicz/prod/gallery/1/optimistic/optimistic_1.jpg",
         type: PaintingType.ALBUM,
-        externalId: 1
+        externalId: "1"
       },
       {
         id: 10,
@@ -21,7 +20,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540750921/user_photos/ettyChaimowicz/prod/gallery/1/optimistic/optimistic_2.jpg",
         type: PaintingType.ALBUM,
-        externalId: 1
+        externalId: "1"
       },
       {
         id: 11,
@@ -29,7 +28,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540750920/user_photos/ettyChaimowicz/prod/gallery/1/optimistic/optimistic_3.jpg",
         type: PaintingType.ALBUM,
-        externalId: 1
+        externalId: "1"
       },
       {
         id: 12,
@@ -37,7 +36,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540750920/user_photos/ettyChaimowicz/prod/gallery/1/optimistic/optimistic_4.jpg",
         type: PaintingType.ALBUM,
-        externalId: 1
+        externalId: "1"
       },
       {
         id: 13,
@@ -45,7 +44,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540750921/user_photos/ettyChaimowicz/prod/gallery/1/optimistic/optimistic_5.jpg",
         type: PaintingType.ALBUM,
-        externalId: 1
+        externalId: "1"
       },
       {
         id: 14,
@@ -53,7 +52,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540750920/user_photos/ettyChaimowicz/prod/gallery/1/optimistic/optimistic_6.jpg",
         type: PaintingType.ALBUM,
-        externalId: 1
+        externalId: "1"
       },
       {
         id: 15,
@@ -61,7 +60,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540750918/user_photos/ettyChaimowicz/prod/gallery/1/optimistic/optimistic_7.jpg",
         type: PaintingType.ALBUM,
-        externalId: 1
+        externalId: "1"
       },
       {
         id: 16,
@@ -69,7 +68,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540750923/user_photos/ettyChaimowicz/prod/gallery/1/optimistic/optimistic_8.jpg",
         type: PaintingType.ALBUM,
-        externalId: 1
+        externalId: "1"
       },
       {
         id: 17,
@@ -77,7 +76,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540750923/user_photos/ettyChaimowicz/prod/gallery/1/optimistic/optimistic_9.jpg",
         type: PaintingType.ALBUM,
-        externalId: 1
+        externalId: "1"
       },
       {
         id: 18,
@@ -85,7 +84,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540750922/user_photos/ettyChaimowicz/prod/gallery/1/optimistic/optimistic_10.jpg",
         type: PaintingType.ALBUM,
-        externalId: 1
+        externalId: "1"
       }
     ]
   },
@@ -100,7 +99,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540825169/user_photos/ettyChaimowicz/prod/gallery/2/cover/cover_1.jpg",
         type: PaintingType.ALBUM,
-        externalId: 2
+        externalId: "2"
       },
       {
         id: 20,
@@ -108,7 +107,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540825169/user_photos/ettyChaimowicz/prod/gallery/2/cover/cover_2.jpg",
         type: PaintingType.ALBUM,
-        externalId: 2
+        externalId: "2"
       },
       {
         id: 21,
@@ -116,7 +115,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540825170/user_photos/ettyChaimowicz/prod/gallery/2/cover/cover_3.jpg",
         type: PaintingType.ALBUM,
-        externalId: 2
+        externalId: "2"
       }
     ]
   },
@@ -131,7 +130,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540825200/user_photos/ettyChaimowicz/prod/gallery/3/zunami/zunami_1.jpg",
         type: PaintingType.ALBUM,
-        externalId: 3
+        externalId: "3"
       }
     ]
   },
@@ -146,7 +145,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540887971/user_photos/ettyChaimowicz/prod/gallery/4/mobile/mobile_1.jpg",
         type: PaintingType.ALBUM,
-        externalId: 4
+        externalId: "4"
       },
       {
         id: 24,
@@ -154,7 +153,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540887971/user_photos/ettyChaimowicz/prod/gallery/4/mobile/mobile_2.jpg",
         type: PaintingType.ALBUM,
-        externalId: 4
+        externalId: "4"
       },
       {
         id: 25,
@@ -162,7 +161,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540887971/user_photos/ettyChaimowicz/prod/gallery/4/mobile/mobile_3.jpg",
         type: PaintingType.ALBUM,
-        externalId: 4
+        externalId: "4"
       },
       {
         id: 26,
@@ -170,7 +169,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540887975/user_photos/ettyChaimowicz/prod/gallery/4/mobile/mobile_4.jpg",
         type: PaintingType.ALBUM,
-        externalId: 4
+        externalId: "4"
       },
       {
         id: 27,
@@ -178,7 +177,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540887974/user_photos/ettyChaimowicz/prod/gallery/4/mobile/mobile_5.jpg",
         type: PaintingType.ALBUM,
-        externalId: 4
+        externalId: "4"
       },
       {
         id: 28,
@@ -186,7 +185,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540887974/user_photos/ettyChaimowicz/prod/gallery/4/mobile/mobile_6.jpg",
         type: PaintingType.ALBUM,
-        externalId: 4
+        externalId: "4"
       },
       {
         id: 29,
@@ -194,7 +193,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540887973/user_photos/ettyChaimowicz/prod/gallery/4/mobile/mobile_7.jpg",
         type: PaintingType.ALBUM,
-        externalId: 4
+        externalId: "4"
       },
       {
         id: 30,
@@ -202,7 +201,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540887974/user_photos/ettyChaimowicz/prod/gallery/4/mobile/mobile_8.jpg",
         type: PaintingType.ALBUM,
-        externalId: 4
+        externalId: "4"
       },
       {
         id: 31,
@@ -210,7 +209,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540887973/user_photos/ettyChaimowicz/prod/gallery/4/mobile/mobile_9.jpg",
         type: PaintingType.ALBUM,
-        externalId: 4
+        externalId: "4"
       },
       {
         id: 32,
@@ -218,7 +217,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540887973/user_photos/ettyChaimowicz/prod/gallery/4/mobile/mobile_10.jpg",
         type: PaintingType.ALBUM,
-        externalId: 4
+        externalId: "4"
       },
       {
         id: 33,
@@ -226,7 +225,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540887971/user_photos/ettyChaimowicz/prod/gallery/4/mobile/mobile_11.jpg",
         type: PaintingType.ALBUM,
-        externalId: 4
+        externalId: "4"
       },
       {
         id: 34,
@@ -234,7 +233,7 @@ export const ALBUMS = [
         imageUrl:
           "https://res.cloudinary.com/dwvfucbtk/image/upload/v1540887971/user_photos/ettyChaimowicz/prod/gallery/4/mobile/mobile_12.jpg",
         type: PaintingType.ALBUM,
-        externalId: 4
+        externalId: "4"
       }
     ]
   }

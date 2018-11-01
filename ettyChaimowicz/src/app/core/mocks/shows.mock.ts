@@ -1,5 +1,6 @@
 import { PaintingType } from "../models/painting.model";
 
+// TODO - set new shows from facebook images
 export const SHOWS = [
   {
     id: 1,

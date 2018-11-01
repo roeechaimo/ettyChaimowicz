@@ -21,6 +21,7 @@ export class ShowsComponent implements OnInit {
     this.showsInit();
   }
 
+  // TODO - create shows service with getShows and setDb methods
   private showsInit() {
     this.showsRef.get().subscribe(data => {
       const showsData: any = data.docs.map(doc => doc.data());

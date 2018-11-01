@@ -41,6 +41,7 @@ export class HomeComponent implements OnInit {
     this.albumsInit();
   }
 
+  // TODO - set new collection in db for the carousle and import images from it
   private albumsInit() {
     this.albumsRef.get().subscribe(data => {
       const albumsData: any = data.docs.map(doc => doc.data());

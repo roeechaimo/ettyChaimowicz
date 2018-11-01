@@ -31,5 +31,8 @@ export class GalleryComponent implements OnInit {
 
       this.albums = albumsData;
     });
+
+    // i've used it here just to update a new "gallery_prod" collection
+    // this._galleryservice.setDb();
   }
 }

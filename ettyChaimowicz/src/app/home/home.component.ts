@@ -27,15 +27,15 @@ export class HomeComponent implements OnInit {
     loop: true,
     touch: true
   };
+  public isLoading: boolean = false;
   public albums: Album[];
-
-  constructor(private _db: AngularFirestore) {}
-
   public carouselItems: Array<any> = [];
   public carouselTileItems: Array<any>;
   public carouselTiles;
 
   private albumsRef = this._db.collection("gallery");
+
+  constructor(private _db: AngularFirestore) {}
 
   ngOnInit() {
     this.albumsInit();
@@ -43,6 +43,8 @@ export class HomeComponent implements OnInit {
 
   // TODO - set new collection in db for the carousle and import images from it
   private albumsInit() {
+    this.isLoading = true;
+
     this.albumsRef.get().subscribe(data => {
       const albumsData: any = data.docs.map(doc => doc.data());
       this.albums = albumsData;
@@ -67,5 +69,7 @@ export class HomeComponent implements OnInit {
       2: [],
       3: []
     };
+
+    this.isLoading = false;
   }
 }

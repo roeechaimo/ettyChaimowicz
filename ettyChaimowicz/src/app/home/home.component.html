@@ -1,7 +1,10 @@
 <div class="sub-container">
   <h2>Home page</h2>
 
-  <ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="carouselItems">
+  <!-- TODO - finish style progress bar and maybe create a separate component for it -->
+  <mat-progress-spinner *ngIf="isLoading" [color]="primary" mode="indeterminate" value="50"></mat-progress-spinner>
+
+  <ngu-carousel *ngIf="!isLoading" #myCarousel [inputs]="carouselConfig" [dataSource]="carouselItems">
     <ngu-tile *nguCarouselDef="let item;">
       <div class="tile">
         <img [src]="item">
